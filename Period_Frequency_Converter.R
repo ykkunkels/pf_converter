@@ -21,7 +21,7 @@ Period_Frequency_Converter <- function(p = NA, f = NA){
 
     p <- round((1 / (f * 60) * 1000), 5)
     print(paste("Given Frequency:", f, "mHz"))
-    print(paste("Calculated Period: ", round(p), " min ( = ", round((p / 1440), 3), " days )", sep = ""))
+    print(paste("Calculated Period: ", round(p, 2), " min ( = ", round((p / 1440), 3), " days )", sep = ""))
 
   }
   
@@ -30,7 +30,7 @@ Period_Frequency_Converter <- function(p = NA, f = NA){
     
     f <- round((((1 / p) / 60) * 1000), 5)
     print(paste("Given Period:", p, "min"))
-    print(paste("Calculated Frequency: ", f, " mHz ( = ", round((1 / p), 5), " min^(-1) )", sep = ""))
+    print(paste("Calculated Frequency: ", round(f, 5), " mHz ( = ", round((1 / p), 5), " min^(-1) )", sep = ""))
       
   }
   

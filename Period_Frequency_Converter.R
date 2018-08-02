@@ -1,7 +1,7 @@
 
 #########################################################################
 #### A simple function to convert frequency to period and vica versa ####
-#### YKK - 02/08/2018                                                ####
+#### Yoram Kevin Kunkels - 02/08/2018                                ####
 ####                                                                 ####
 #### Operation: Give either Period (p; in min.) or                   ####
 ####            Frequency (f; in mHz) value to calculate the other.  ####
@@ -21,7 +21,7 @@ Period_Frequency_Converter <- function(p = NA, f = NA){
 
     p <- round((1 / (f * 60) * 1000), 5)
     print(paste("Given Frequency:", f, "mHz"))
-    print(paste("Calculated Period: ", round(p), " min ( = ", round((p / 1440), 5), " days )", sep = ""))
+    print(paste("Calculated Period: ", round(p), " min ( = ", round((p / 1440), 3), " days )", sep = ""))
 
   }
   
@@ -36,6 +36,7 @@ Period_Frequency_Converter <- function(p = NA, f = NA){
   
 }
 
-## Runner
-Period_Frequency_Converter(p = (60*25.5))
+## Examples
+Period_Frequency_Converter(p = (60 * 24)) # 24h period to frequency
+Period_Frequency_Converter(f = 0.01157) # 0.01157 mHz frequency to period
  
